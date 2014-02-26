@@ -164,7 +164,7 @@ prerender.buildApiUrl = function(req) {
   if (req.get('X-Forwarded-Proto')) {
     protocol = req.get('X-Forwarded-Proto');
   }
-  var fullUrl = protocol + "://" + req.get('host') + req.url;
+  var fullUrl = "https://" + req.get('host') + req.url;
   return prerenderUrl + forwardSlash + fullUrl
 };
 
